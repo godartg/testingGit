@@ -20,13 +20,21 @@ git checkout -b "developerEjemplo"
 Comando para cambiar a la nueva rama del desarrollador 
 git checkout "developerEjemplo"
 
-guardar cambios
+#guardar cambios
 git add -A
 git commit -m "mensaje"
 git push -u origin developerEjemplo
 
+#ignorar un archivo
+paso 1
+crear el archivo .gitignore al mismo nivel que la carpeta .git o la carpeta raiz donde se esta trabajando
+ejemplo:
+/proyectogit/.git/
+/proyectogit/.gitignore
+/proyectogit/otro.archivo
 
-
+#ver el historial por comandos
+git log -p 
 
 git fetch origin 
 git merge origin/master
