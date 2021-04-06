@@ -44,5 +44,15 @@ Pasos:
 #Crear un nuevos cambios en otra rama
 $ git checkout -b cambio develop
 
+#Incorporar cambios finales a la rama de qa
+$ git checkout develop
+Switched to branch 'develop'
+$ git merge --no-ff myfeature
+Updating ea1b82a..05e9557
+(Summary of changes)
+$ git branch -d myfeature
+Deleted branch myfeature (was 05e9557).
+$ git push origin develop
+
 git fetch origin 
 git merge origin/master
