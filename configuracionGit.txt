@@ -38,9 +38,38 @@ git log -p
 
 #en caso de que se hallan olvidado agregar un archivo hacer:
 Pasos:
-1.git add * 
-2.git commit amend -m "nuevo texto"
+1.$ git add * 
+2.$ git commit amend -m "nuevo texto"
 
+#Crear un nuevos cambios en otra rama
+$ git checkout -b cambio develop
+
+#Incorporar cambios finales a la rama de qa
+$ git checkout develop
+Switched to branch 'develop'
+$ git merge --no-ff myfeature
+Updating ea1b82a..05e9557
+(Summary of changes)
+$ git branch -d myfeature
+Deleted branch myfeature (was 05e9557).
+$ git push origin develop
+
+#Creating a release branch
+$ git checkout -b release-1.2 develop
+Switched to a new branch "release-1.2"
+$ ./bump-version.sh 1.2
+Files modified successfully, version bumped to 1.2.
+$ git commit -a -m "Bumped version number to 1.2"
+[release-1.2 74d9424] Bumped version number to 1.2
+1 files changed, 1 insertions(+), 1 deletions(-)
+
+#Finalizar una rama de liberacion
+$ git checkout master
+Switched to branch 'master'
+$ git merge --no-ff release-1.2
+Merge made by recursive.
+(Summary of changes)
+$ git tag -a 1.2
 
 git fetch origin 
 git merge origin/master
