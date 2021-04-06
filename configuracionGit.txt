@@ -1,0 +1,46 @@
+create a new repository on the command line
+echo "# testingGit" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M Master
+git remote add origin https://github.com/godartg/testingGit.git
+git push -u origin Master
+
+push an existing repository from the command line
+git remote add origin https://github.com/godartg/testingGit.git
+git branch -M Master
+git push -u origin Master
+
+descargar un repositorio
+git clone https://github.com/godartg/testingGit.git
+ingresar al proyecto
+Comando para crear y cambiar a la nueva rama del desarrollador
+git checkout -b "developerEjemplo"
+Comando para cambiar a la nueva rama del desarrollador 
+git checkout "developerEjemplo"
+
+#guardar cambios
+git add -A
+git commit -m "mensaje"
+git push -u origin developerEjemplo
+
+#ignorar un archivo
+paso 1
+crear el archivo .gitignore al mismo nivel que la carpeta .git o la carpeta raiz donde se esta trabajando
+ejemplo:
+/proyectogit/.git/
+/proyectogit/.gitignore
+/proyectogit/otro.archivo
+
+#ver el historial por comandos
+git log -p 
+
+#en caso de que se hallan olvidado agregar un archivo hacer:
+Pasos:
+1.git add * 
+2.git commit amend -m "nuevo texto"
+
+
+git fetch origin 
+git merge origin/master
