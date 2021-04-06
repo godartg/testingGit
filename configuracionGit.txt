@@ -63,5 +63,13 @@ $ git commit -a -m "Bumped version number to 1.2"
 [release-1.2 74d9424] Bumped version number to 1.2
 1 files changed, 1 insertions(+), 1 deletions(-)
 
+#Finalizar una rama de liberacion
+$ git checkout master
+Switched to branch 'master'
+$ git merge --no-ff release-1.2
+Merge made by recursive.
+(Summary of changes)
+$ git tag -a 1.2
+
 git fetch origin 
 git merge origin/master
